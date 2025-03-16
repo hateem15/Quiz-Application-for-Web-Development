@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games & Quizzes</title>
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Linking  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center py-2">
+                <span class="header-title">Games & Quizzes</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Body  -->
+    <main>
+        <div class="container py-4">
+            <!-- Start Screen (Initial View) -->
+            <div id="start-screen" class="quiz-container">
+                <div class="quiz-background">
+                    <div class="quiz-card">
+                        <h2 class="quiz-title">Do you Remember the basic questions regarding Web Programming. Let's Take a Quiz!</h2>
+                        <button id="start-btn" class="btn btn-primary btn-lg mt-3">Start</button>
+                        <div class="quiz-meta mt-4">
+                            <span>5 Questions</span>
+                            <div class="toggle-container ms-4">
+                                <span>Timer Mode</span>
+                                <label class="switch ms-2">
+                                    <input type="checkbox" id="timer-toggle">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Qustion Screemn -->
+            <div id="questions-screen" class="quiz-container" style="display: none;">
+                <div class="quiz-header-info d-flex justify-content-between align-items-center mb-3">
+                    <h3 id="quiz-title-small">Quiz Qustions.</h3>
+                    <div class="progress-info">
+                        <span id="question-progress">1 of 5</span>
+                        <span class="ms-3">Score: <span id="current-score">0</span></span>
+                    </div>
+                </div>
+
+                <div class="quiz-content p-4 bg-white rounded shadow-sm">
+                    <h4 id="question-text" class="mb-4">Question text will appear here</h4>
+                    
+                    <div id="options-container" class="mb-4">
+                    </div>
+                    
+                    <div class="tip-container mt-4 mb-3">
+                        <i class="fas fa-lightbulb text-warning"></i>
+                        <small id="question-tip" class="text-muted">Tip information will appear here</small>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button id="next-btn" class="btn btn-primary px-4">Next</button>
+                    </div>
+                </div>
+            </div>
+
+              <!-- sowing result screen -->
+            <div id="results-screen" class="quiz-container" style="display: none;">
+                <div class="result-tabs mb-3">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Score</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Answers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Leaderboard</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="results-content p-4 bg-white rounded shadow-sm">
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <h3 class="mb-3">Congrats!</h3>
+                            <div class="score-circle">
+                                <div class="score-inner">
+                                    <span id="final-score">0/0</span>
+                                    <span class="score-percent">0%</span>
+                                </div>
+                            </div>
+                            <button id="play-again-btn" class="btn btn-primary mt-3">Play Again</button>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="answers-summary">
+                                <h4>Answers</h4>
+                                <div id="answers-list">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-5">
+        <div class="container">
+            <div class="footer-top py-4">
+                <h5>History of your fingertips - Sign up here to see what happened On This Day, every day in your inbox</h5>
+                <div class="row mt-3">
+                    <div class="col-md-8">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary w-100">Subscribe</button>
+                    </div>
+                </div>
+                <p class="mt-3 small text-muted">
+                    By signing up for this email, you are agreeing to news, offers, and information from Encyclopedia Britannica.
+                    Click here to view our Privacy Notice. Easy unsubscribe links are provided in every email.
+                </p>
+            </div>
+            
+            <div class="footer-social py-3">
+                <h6>STAY CONNECTED</h6>
+                <div class="social-icons">
+                    <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links py-3">
+                <a href="#">About Us</a>
+                <a href="#">Legal Info</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Diversity</a>
+            </div>
+            
+            <div class="footer-copyright py-2">
+                <p class="small text-muted">©2025 Encyclopedia Britannica, Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
